@@ -1,1 +1,18 @@
-/*# sourceMappingURL=style.css.map */
+.icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  stroke-width: 1.5;
+  stroke: currentColor;
+  fill: none;
+  vertical-align: middle;
+}
+
+.hide-scroll-bar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.hide-scroll-bar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
+}/*# sourceMappingURL=style.css.map */
