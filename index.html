@@ -1,63 +1,117 @@
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@^2.0/dist/tailwind.min.css" rel="stylesheet">
-        <title>Fusion Frames</title>
-    </head>
-    <body class="bg-gray-50 flex"> <!-- Adjusted background color to a lighter shade for a cleaner look -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@^2.0/dist/tailwind.min.css" rel="stylesheet">
+    <title>Fusion Frames</title>
+    <style>
+        .slider-container {
+            position: relative;
+            height: 80vh; /* Adjust based on your preference */
+            width: 100%; /* Ensure this matches the width of the content area */
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-        <!-- Vertical Navbar, centered vertically -->
-        <div class="fixed inset-0 left-0 flex flex-col justify-center py-10 w-40">
-            <div class="mx-auto">
-                <!-- Simplified header without bold and size reduction -->
-                <ul class="space-y-6">
-                    <li><a href="#" class="text-base text-gray-800 hover:text-black">Shop</a></li>
-                    <li><a href="#" class="text-base text-gray-800 hover:text-black">Try at Home</a></li>
-                    <li><a href="#" class="text-base text-gray-800 hover:text-black">Lookbook</a></li>
-                    <li><a href="#" class="text-base text-gray-800 hover:text-black">Journal</a></li>
-                </ul>
+        .slides {
+            display: flex;
+            width: 500%; /* This should be 100% times number of slides */
+            transition: transform 0.5s ease;
+        }
+
+        .slide {
+            width: 20%; /* This should be 100% divided by the number of slides */
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .nav-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 20;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+
+        .nav-arrow.left {
+            left: 10px;
+        }
+
+        .nav-arrow.right {
+            right: 10px;
+        }
+
+        /* Vertical Navbar styling */
+        .vertical-navbar {
+            background-color: rgba(255, 203, 164, 0.75); /* Peach color with opacity */
+        }
+    </style>
+</head>
+<body class="bg-gray-50 flex">
+
+    <!-- Vertical Navbar, centered vertically -->
+    <div class="fixed inset-0 left-0 flex flex-col justify-center py-10 w-40 opacity-80 vertical-navbar">
+        <div class="mx-auto text-white">
+            <ul class="space-y-6">
+                <li><a href="#" class="text-base hover:text-gray-300">Shop</a></li>
+                <li><a href="#" class="text-base hover:text-gray-300">Try at Home</a></li>
+                <li><a href="#" class="text-base hover:text-gray-300">Lookbook</a></li>
+                <li><a href="#" class="text-base hover:text-gray-300">Journal</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="pl-40 flex-1">
+        <header class="py-5 px-10 flex justify-between items-center w-full fixed bg-gray-50 shadow">
+            <div class="text-xl font-semibold">Fusion Frames</div>
+        </header>
+
+        <div class="slider-container mt-20">
+            <button class="nav-arrow left" onclick="changeSlide(-1)">&lt;</button>
+            <div class="slides">
+                <!-- Wrapper for slides -->
+                <div class="slide">
+                    <img src="./Images/ModelPeople/model1.png" alt="Slide Image">
+                </div>
+                <div class="slide">
+                    <img src="./Images/ModelPeople/model2.png" alt="Slide Image">
+                </div>
+                <!-- Add additional slides as needed -->
             </div>
+            <button class="nav-arrow right" onclick="changeSlide(1)">&gt;</button>
         </div>
 
-        <!-- Main Content -->
-        <div class="pl-20 flex-1"> <!-- pl-40 to offset for the navbar -->
-            <header class="py-5 px-10 flex justify-between items-center w-full">
-                <div class="text-xl pl-50 font-semibold">Fusion Frames</div> <!-- Added company name on the top left -->
-                <div class="space-x-4">
-                    <!-- Icons -->
-                    <a href="#" class="icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                        </svg>
-                    </a>
-                    <a href="#" class="icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 7h18a1 1 0 011 1v13a1 1 0 01-1 1H3a1 1 0 01-1-1V8a1 1 0 011-1zm3 4v3m6-3v3m6-3v3m-6-6V5a3 3 0 10-6 0v3m6 0h6 a3 3 0 012.995 2.824L18 11m0 0H6" />
-                        </svg>
-                    </a>
-                </div>
-            </header>
-
-            <main class="flex flex-col items-center justify-center min-h-screen">
-                <div class="p-6">
-                    <img src="./Images/Frames/harper_black.png" alt="Charlie Silver Frame" class="block mx-auto ">
-                    <div class="text-center mt-10">
-                        <h2 class="text-4xl font-bold">Charlie</h2>
-                        <span class="text-2xl">£120</span>
-                        <div class="flex justify-center space-x-2 mt-4">
-                            <span class="block w-4 h-4 bg-black rounded-full"></span>
-                        </div>
-                        <button class="mt-6 px-8 py-3 text-lg font-semibold bg-black text-white rounded-lg hover:bg-gray-800">Add to Cart</button>
-                    </div>
-                </div>
-            </main>
-            
-            <footer class="p-6 text-center">
-                <p class="text-gray-600">&copy; 2023 Fusion Frames. All rights reserved.</p>
-            </footer>
-        </div>
-        
-    </body>
-    </html>
+        <footer class="p-6 text-center fixed bottom-0 w-full bg-gray-50 shadow">
+            <p class="text-gray-600">&copy; 2024 Fusion Frames. All rights reserved.</p>
+        </footer>
+    </div>
+    
+    <script>
+        let currentSlide = 0;
+        function changeSlide(direction) {
+            const slidesContainer = document.querySelector('.slides');
+            const slidesCount = slidesContainer.children.length;
+            currentSlide = (currentSlide + direction + slidesCount) % slidesCount;
+            slidesContainer.style.transform = `translateX(-${currentSlide * 100 / slidesCount}%)`;
+        }
+    </script>
+</body>
+</html>
