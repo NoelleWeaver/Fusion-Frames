@@ -3,98 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@^2.0/dist/tailwind.min.css" rel="stylesheet">
     <title>Fusion Frames</title>
-    <style>
-        .slider-container {
-            position: relative;
-            height: 80vh; /* Adjust based on your preference */
-            width: 100%; /* Ensure this matches the width of the content area */
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .slides {
-            display: flex;
-            width: 500%; /* This should be 100% times number of slides */
-            transition: transform 0.5s ease;
-        }
-
-        .slide {
-            width: 20%; /* This should be 100% divided by the number of slides */
-            flex-shrink: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .slide img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center;
-        }
-
-        .nav-arrow {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            z-index: 20;
-            background: rgba(0, 0, 0, 0.5);
-            color: white;
-            border: none;
-            padding: 10px 15px;
-            cursor: pointer;
-            border-radius: 50%;
-        }
-
-        .nav-arrow.left {
-            left: 10px;
-        }
-
-        .nav-arrow.right {
-            right: 10px;
-        }
-
-        /* Vertical Navbar styling */
-        .vertical-navbar {
-            background-color: rgba(255, 203, 164, 0.75); /* Peach color with opacity */
-        }
-    </style>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@^2.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body class="bg-gray-50 flex">
 
-    <!-- Vertical Navbar, centered vertically -->
-    <div class="fixed inset-0 left-0 flex flex-col justify-center py-10 w-40 opacity-80 vertical-navbar">
+    <div class="fixed inset-0 left-0 flex flex-col justify-center py-10 w-40 bg-opacity-80 bg-peach">
         <div class="mx-auto text-white">
             <ul class="space-y-6">
+                <li><a href="#" class="text-base hover:text-gray-300">Home</a></li>
                 <li><a href="#" class="text-base hover:text-gray-300">Shop</a></li>
-                <li><a href="#" class="text-base hover:text-gray-300">Try at Home</a></li>
-                <li><a href="#" class="text-base hover:text-gray-300">Lookbook</a></li>
-                <li><a href="#" class="text-base hover:text-gray-300">Journal</a></li>
+                <li><a href="#" class="text-base hover:text-gray-300">About Us</a></li>
+                <li><a href="#" class="text-base hover:text-gray-300">Cart</a></li>
             </ul>
         </div>
     </div>
 
-    <!-- Main Content -->
     <div class="pl-40 flex-1">
         <header class="py-5 px-10 flex justify-between items-center w-full fixed bg-gray-50 shadow">
-            <div class="text-xl font-semibold">Fusion Frames</div>
+            <h1 class="text-xl font-semibold">Fusion Frames</h1>
         </header>
 
         <div class="slider-container mt-20">
             <button class="nav-arrow left" onclick="changeSlide(-1)">&lt;</button>
             <div class="slides">
-                <!-- Wrapper for slides -->
-                <div class="slide">
-                    <img src="./Images/ModelPeople/model1.png" alt="Slide Image">
+                <div class="slide" id="model1"><img src="./Images/Frames/glassesframes1.avif" alt="Slide 1">
+                    <div class="frame-description">
+                        <div class="frame-description">
+                            <h2 class="frame-name">Charlie</h2>
+                            <ul class="color-options">
+                                <li><button style="background-color: #C2B280;"></button></li>
+                                <li><button style="background-color: #565656;"></button></li>
+                                <li><button style="background-color: #A2A2D0;"></button></li>
+                                <li><button style="background-color: #6699CC;"></button></li>
+                            </ul>
+                            <button class="details-dropdown">Product Details ▼</button>
+                            <button class="add-to-cart">Add to Cart</button>
+                            <span class="frame-price">£120</span>
+                        </div>
+                        
+                    </div>
                 </div>
-                <div class="slide">
-                    <img src="./Images/ModelPeople/model2.png" alt="Slide Image">
+                <div class="slide"><img src="./Images/Frames/glassesframes2.avif" alt="Slide 2">
+                    <div class="frame-description">
+                        <p class="frame-name">Charlie</p>
+                        <p class="frame-price">£120</p>
+                    </div>
                 </div>
-                <!-- Add additional slides as needed -->
+                <div class="slide" id="model3"><img src="./Images/Frames/glassesframes3.avif" alt="Slide 3">
+                    <div class="frame-description">
+                        <p class="frame-name">Charlie</p>
+                        <p class="frame-price">£120</p>
+                    </div>
+                </div>
+                <div class="slide" id="model4"><img src="./Images/Frames/glassesframes4.avif"  alt="Slide 4">
+                    <div class="frame-description">
+                        <p class="frame-name">Charlie</p>
+                        <p class="frame-price">£120</p>
+                    </div>
+                </div>
+                <div class="slide"><img src="./Images/Frames/glassesframes5.avif"  alt="Slide 5">
+                    <div class="frame-description">
+                        <p class="frame-name">Charlie</p>
+                        <p class="frame-price">£120</p>
+                    </div>
+                </div>
+                <div class="slide"><img src="./Images/Frames/glassesframes6.avif" alt="Slide 6">
+                    <div class="frame-description">
+                        <p class="frame-name">Charlie</p>
+                        <p class="frame-price">£120</p>
+                    </div>
+                </div>
             </div>
             <button class="nav-arrow right" onclick="changeSlide(1)">&gt;</button>
         </div>
@@ -103,15 +83,7 @@
             <p class="text-gray-600">&copy; 2024 Fusion Frames. All rights reserved.</p>
         </footer>
     </div>
-    
-    <script>
-        let currentSlide = 0;
-        function changeSlide(direction) {
-            const slidesContainer = document.querySelector('.slides');
-            const slidesCount = slidesContainer.children.length;
-            currentSlide = (currentSlide + direction + slidesCount) % slidesCount;
-            slidesContainer.style.transform = `translateX(-${currentSlide * 100 / slidesCount}%)`;
-        }
-    </script>
+
+    <script src="./index.js"></script>
 </body>
 </html>

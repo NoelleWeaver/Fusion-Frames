@@ -1,13 +1,7 @@
-document.getElementById('scrollLeft').addEventListener('click', function() {
-    document.querySelector('.flex-nowrap').scrollBy({
-        left: -300,
-        behavior: 'smooth'
-    });
-});
-
-document.getElementById('scrollRight').addEventListener('click', function() {
-    document.querySelector('.flex-nowrap').scrollBy({
-        left: 300,
-        behavior: 'smooth'
-    });
-});
+let currentSlide = 0;
+function changeSlide(direction) {
+    const slides = document.querySelector('.slides');
+    const slideCount = slides.children.length; // should be 6
+    currentSlide = (currentSlide + direction + slideCount) % slideCount;
+    slides.style.transform = `translateX(-${currentSlide * (100 / slideCount)}%)`;
+}
