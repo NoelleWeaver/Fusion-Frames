@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "adhesian-serif";
+  font-weight: lighter;
+  src: url(../fonts/adhesian-serif/Adhesian\ Serif/Adhesian-Thin.otf);
+}
+img {
+  height: 829px;
+  width: 699px;
+}
+
+h1 {
+  position: absolute;
+  font-size: 100px;
+  color: black;
+  left: 40%;
+  top: 30%;
+  font-family: adhesian-serif;
+}/*# sourceMappingURL=cont_style.css.map */
