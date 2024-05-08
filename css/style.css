@@ -31,33 +31,34 @@
 }
 
 .slide {
-  width: 16.67%; /* Each slide should take up only 16.67% of the total .slides width, which is 100% of the view width */
-  flex-shrink: 0;
+  width: calc(100% / 6);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .slide img {
-  max-width: 50%; /* Adjust based on desired size */
-  max-height: 70%; /* Adjust to leave space for the description */
-  -o-object-fit: contain;
-     object-fit: contain; /* Ensures the image is fully visible without cropping */
+  width: auto;
+  max-height: 60%;
+  object-fit: contain;
 }
 
 .frame-description {
   display: flex;
+  flex-direction: row;
   align-items: center;
-  justify-content: space-around; /* Adjusts spacing around items */
-  width: 100%; /* Ensures it takes full available width */
-  padding: 10px; /* Adds some padding around the items */
-  background-color: #f9f9f9; /* Adds a light background color */
-  border: 1px solid #ddd; /* Optional border for better visibility */
+  justify-content: space-around;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: #f0f0f0;
+  border-top: 1px solid #ddd;
 }
 
 .frame-name, .frame-price {
-  margin: 0 20px; /* Adds horizontal spacing */
+  margin: 0 20px;
   font-size: 1.2rem;
 }
 
@@ -65,7 +66,8 @@
   list-style: none;
   padding: 0;
   display: flex;
-  margin: 0 20px; /* Adds horizontal spacing */
+  margin: 0 20px;
+  padding-top: 8px;
 }
 
 .color-options li button {
@@ -79,16 +81,20 @@
 
 .details-dropdown, .add-to-cart {
   padding: 10px 20px;
+  height: 100%;
   border: none;
-  background-color: black;
-  color: white;
+  color: rgb(0, 0, 0);
   cursor: pointer;
   font-size: 0.9rem;
 }
 
 .add-to-cart {
-  background-color: #333; /* Darker for contrast */
-  margin-left: 20px; /* Additional spacing from details button */
+  background-color: #333;
+  margin-left: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
+  color: white;
+  height: 100%;
 }
 
 .nav-arrow {
@@ -114,4 +120,5 @@
 
 .bg-peach {
   background-color: rgba(255, 203, 164, 0.75);
-} /*# sourceMappingURL=style.css.map */
+}
+/*# sourceMappingURL=style.css.map */
