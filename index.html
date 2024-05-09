@@ -9,19 +9,18 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body class="bg-gray-50 flex">
-
-    <div class="fixed inset-0 left-0 flex flex-col justify-center py-10 w-40 bg-opacity-80 bg-black">
+    <!-- Moved the initial arrow setup to JavaScript -->
+    <div class="sidebar-toggle" onclick="toggleSidebar()"></div> 
+    <div class="sidebar fixed inset-0 left-0 flex flex-col justify-center py-10 bg-opacity-80 bg-black">
         <div class="mx-auto text-white">
-            <ul class="sidebar-links"> <!-- Removed space-y-6 and added a new class for custom styling -->
+            <ul class="sidebar-links">
                 <li><a href="./index.html" class="text-base hover:text-gray-300 font-side">Home</a></li>
                 <li><a href="#" class="text-base hover:text-gray-300 font-side">Shop</a></li>
                 <li><a href="./about.html" class="text-base hover:text-gray-300 font-side">About Us</a></li>
                 <li><a href="#" class="text-base hover:text-gray-300 font-side">Cart</a></li>
-
             </ul>            
         </div>
     </div>
-
     <div class="pl-40 flex-1">
         <header class="header">
             <h1 class="logo">
@@ -33,7 +32,8 @@
                 <button class="icon-button" aria-label="Cart"><i class="fas fa-shopping-bag"></i></button>
             </div>
         </header>
-
+    </div>
+    
         <div class="slider-container mt-20">
             <button class="nav-arrow left" onclick="changeSlide(-1)"></button>
             <div class="slides">
@@ -103,11 +103,14 @@
             </div>
         
             <button class="nav-arrow right" onclick="changeSlide(1)"></button>
+            <div class="slide-dots">
+            </div>
         </div>
 
-        <footer class="p-6 text-center fixed bottom-0 w-full bg-gray-50">
-            <p class="text-gray-600">&copy; 2024 Fusion Frames. All rights reserved.</p>
+        <footer class="footer">
+            <p>&copy; 2024 Fusion Frames. All rights reserved.</p>
         </footer>
+        
     </div>
 
     <script src="./index.js"></script>
