@@ -31,30 +31,30 @@
 }
 
 .slide {
-  width: calc(100% / 6);
+  width: 16.67%; /* Each slide should take up only 16.67% of the total .slides width, which is 100% of the view width */
+  flex-shrink: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
 }
 
 .slide img {
-  width: auto;
-  max-height: 60%;
-  object-fit: contain;
+  max-width: 50%; /* Adjust based on desired size */
+  max-height: 70%; /* Adjust to leave space for the description */
+  -o-object-fit: contain;
+     object-fit: contain; /* Ensures the image is fully visible without cropping */
 }
 
 .frame-description {
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: space-around;
   width: 100%;
-  padding: 10px;
-  box-sizing: border-box;
-  background-color: #f0f0f0;
-  border-top: 1px solid #ddd;
+  padding: 5px 10px; /* Adjusted for thinner rectangle */
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  margin-top: 50px; /* Adjusted to move lower */
 }
 
 .frame-name, .frame-price {
@@ -67,7 +67,6 @@
   padding: 0;
   display: flex;
   margin: 0 20px;
-  padding-top: 8px;
 }
 
 .color-options li button {
@@ -81,9 +80,9 @@
 
 .details-dropdown, .add-to-cart {
   padding: 10px 20px;
-  height: 100%;
   border: none;
-  color: rgb(0, 0, 0);
+  background-color: black;
+  color: white;
   cursor: pointer;
   font-size: 0.9rem;
 }
@@ -91,10 +90,6 @@
 .add-to-cart {
   background-color: #333;
   margin-left: 20px;
-  padding-left: 50px;
-  padding-right: 50px;
-  color: white;
-  height: 100%;
 }
 
 .nav-arrow {
@@ -120,5 +115,4 @@
 
 .bg-peach {
   background-color: rgba(255, 203, 164, 0.75);
-}
-/*# sourceMappingURL=style.css.map */
+} /*# sourceMappingURL=style.css.map */

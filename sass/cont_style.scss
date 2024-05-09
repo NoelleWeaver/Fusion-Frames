@@ -2,10 +2,11 @@
     margin: 0;
     padding: 0;
 }
+
+
 @font-face {
-    font-family: 'adhesian-serif';
-    font-weight: lighter;
-    src: url(../fonts/adhesian-serif/Adhesian\ Serif/Adhesian-Thin.otf);
+    font-family: Testing;
+    src: url(../fonts);
 }
 
 img {
@@ -15,9 +16,10 @@ img {
 
 h1 {
     position: absolute;
-    font-size: 100px;
+    font-size: 7vw;
+    font-weight: 500;
     color: black;
     left: 40%;
     top: 30%;
-    font-family: adhesian-serif;
+    font-family: Testing;
 }
