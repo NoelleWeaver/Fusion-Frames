@@ -74,15 +74,15 @@ document.addEventListener('DOMContentLoaded', function () {
     const logoPart1 = document.querySelector('.logo-part1');
     const originalBackground = 'url(https://coolbackgrounds.io/images/backgrounds/white/white-canyon-6c5d2a4c.jpg)';
     const alternateBackground = 'url(https://t3.ftcdn.net/jpg/01/36/78/52/360_F_136785269_05hcRhonbg4cyLZFApZWemV7oypynXqd.jpg)';
-    const originalSidebarWidth = '160px';  // Ensure this matches your CSS for the sidebar width
+    const originalSidebarWidth = '160px';  
 
     function updateToggleButton() {
         toggleButton.innerHTML = sidebar.classList.contains('closed') ? '>' : '<';
-        // Adjust the toggle button's position based on the sidebar state
+        
         toggleButton.style.left = sidebar.classList.contains('closed') ? '0px' : originalSidebarWidth;
-        // Adjust the slider container's padding based on the sidebar state
+        
         sliderContainer.style.paddingLeft = sidebar.classList.contains('closed') ? '0px' : originalSidebarWidth;
-        // Change the logo background based on the sidebar state
+        
         logoPart1.style.backgroundImage = sidebar.classList.contains('closed') ? alternateBackground : originalBackground;
     }
 
@@ -91,5 +91,5 @@ document.addEventListener('DOMContentLoaded', function () {
         updateToggleButton();
     };
 
-    updateToggleButton(); // Initialize the correct toggle button state
+    updateToggleButton(); 
 });
