@@ -112,6 +112,7 @@
 }
 
 .icons {
+  padding-top: 10px;
   display: flex;
   align-items: center;
   gap: 20px; /* Space between icons */
@@ -128,4 +129,72 @@
 
 .icon-button:hover {
   color: gray; /* Change on hover */
+}
+
+.logo {
+  font-size: 48px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  color: black;
+  padding-left: 5px;
+  padding-top: 10px;
+}
+
+.logo-part1 {
+  color: white;
+  padding-right: 10px; /* Small padding for overlap effect */
+  background: url(https://coolbackgrounds.io/images/backgrounds/white/white-canyon-6c5d2a4c.jpg) 0 0/cover no-repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.logo-part2 {
+  padding-left: 11px;
+  color: black; /* Adjust as per design */
+  background: url(https://t3.ftcdn.net/jpg/01/36/78/52/360_F_136785269_05hcRhonbg4cyLZFApZWemV7oypynXqd.jpg) 0 0/cover no-repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@font-face {
+  font-family: "DMSans";
+  src: url("../Fonts/DMSans-VariableFont_opsz,wght.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+.body, h1, button {
+  font-family: "DMSans", sans-serif;
+}
+
+.sidebar-links li {
+  margin-bottom: 50px; /* Adds more space between each link */
+}
+
+.sidebar-links li:last-child {
+  margin-bottom: 0; /* Removes margin from the last item to maintain padding consistency at the bottom */
+}
+
+.font-side {
+  font-family: "DMSans", sans-serif;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+  display: block; /* Ensures the link takes full width for better hover area */
+}
+
+.font-side:hover {
+  color: #fff;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+}
+
+/* Additional styling to adjust vertical centering and padding of the sidebar */
+.mx-auto {
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centers the links vertically */
+  height: 100%; /* Takes full height to align items properly */
 }/*# sourceMappingURL=style.css.map */

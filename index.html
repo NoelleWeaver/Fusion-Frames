@@ -12,18 +12,21 @@
 
     <div class="fixed inset-0 left-0 flex flex-col justify-center py-10 w-40 bg-opacity-80 bg-black">
         <div class="mx-auto text-white">
-            <ul class="space-y-6">
-                <li><a href="#" class="text-base hover:text-gray-300">Home</a></li>
-                <li><a href="#" class="text-base hover:text-gray-300">Shop</a></li>
-                <li><a href="#" class="text-base hover:text-gray-300">About Us</a></li>
-                <li><a href="#" class="text-base hover:text-gray-300">Cart</a></li>
-            </ul>
+            <ul class="sidebar-links"> <!-- Removed space-y-6 and added a new class for custom styling -->
+                <li><a href="#" class="text-base hover:text-gray-300 font-side">Home</a></li>
+                <li><a href="#" class="text-base hover:text-gray-300 font-side">Shop</a></li>
+                <li><a href="#" class="text-base hover:text-gray-300 font-side">About Us</a></li>
+                <li><a href="#" class="text-base hover:text-gray-300 font-side">Cart</a></li>
+            </ul>            
         </div>
     </div>
 
     <div class="pl-40 flex-1">
         <header class="header">
-            <h1 class="text-xl font-semibold">Fusion Frames</h1>
+            <h1 class="logo">
+                <span class="logo-part1">Fusion</span>
+                <span class="logo-part2">Frames</span>
+            </h1>
             <div class="icons">
                 <button class="icon-button" aria-label="Search"><i class="fas fa-search"></i></button>
                 <button class="icon-button" aria-label="Cart"><i class="fas fa-shopping-bag"></i></button>
@@ -33,7 +36,6 @@
         <div class="slider-container mt-20">
             <button class="nav-arrow left" onclick="changeSlide(-1)"></button>
             <div class="slides">
-                <!-- Replicate this setup for each slide -->
                 <div class="slide" id="model1">
                     <img src="./Images/Frames/glassesframes1.avif" alt="Slide 1">
                     <div class="frame-description">
