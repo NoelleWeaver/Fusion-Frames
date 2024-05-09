@@ -27,92 +27,105 @@
 .slides {
   display: flex;
   transition: transform 0.5s ease;
-  width: 600%; /* As there are 6 slides, each slide should be 100% of the view width */
+  width: 900%; /* As there are 6 slides, each slide should be 100% of the view width */
 }
 
 .slide {
-  width: 16.67%; /* Each slide should take up only 16.67% of the total .slides width, which is 100% of the view width */
-  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column; /* Stack image and description vertically */
+  justify-content: center; /* Center everything vertically */
+  align-items: center; /* Center everything horizontally */
 }
 
 .slide img {
-  max-width: 50%; /* Adjust based on desired size */
+  max-width: 80%; /* Adjust based on desired size */
   max-height: 70%; /* Adjust to leave space for the description */
   -o-object-fit: contain;
      object-fit: contain; /* Ensures the image is fully visible without cropping */
 }
 
 .frame-description {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  width: 100%;
-  padding: 5px 10px; /* Adjusted for thinner rectangle */
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  margin-top: 50px; /* Adjusted to move lower */
+  text-align: center; /* Center the text */
+  margin-top: 20px; /* Space between image and text */
 }
 
-.frame-name, .frame-price {
-  margin: 0 20px;
-  font-size: 1.2rem;
+.frame-name {
+  font-size: 1.2rem; /* Large enough to be readable */
+  font-weight: bold;
 }
 
-.color-options {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  margin: 0 20px;
-}
-
-.color-options li button {
-  border: none;
-  cursor: pointer;
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  margin: 0 5px;
-}
-
-.details-dropdown, .add-to-cart {
-  padding: 10px 20px;
-  border: none;
-  background-color: black;
-  color: white;
-  cursor: pointer;
-  font-size: 0.9rem;
-}
-
-.add-to-cart {
-  background-color: #333;
-  margin-left: 20px;
+.frame-price {
+  font-size: 1rem;
 }
 
 .nav-arrow {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 50%; /* Center vertically */
+  right: 10px; /* Place on the right side */
+  transform: translateY(-50%) translateX(-100%); /* Adjust horizontal position */
   z-index: 10;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
+  color: black;
   border: none;
-  padding: 10px 15px;
+  padding: 10px;
   cursor: pointer;
-  border-radius: 50%;
+  width: 40px; /* Fixed width for a circular shape */
+  height: 40px; /* Fixed height for a circular shape */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
+.nav-arrow::before {
+  content: ""; /* Use pseudo-element for custom icon */
+  display: block;
+  width: 15px; /* Width of the arrow */
+  height: 15px; /* Height of the arrow */
+  border-right: 2px solid black; /* Creates part of the arrow */
+  border-top: 2px solid black; /* Creates part of the arrow */
+  transform: rotate(45deg); /* Rotate to create an arrow shape */
+}
+
+.nav-arrow.left::before {
+  transform: rotate(-135deg); /* Rotate differently for the left arrow */
+}
+
+/* Adjust the positioning of the left arrow to stack it below the right arrow */
 .nav-arrow.left {
-  left: 10px;
+  top: calc(50% + 60px); /* Move it down relative to the right arrow */
+  transform: translateY(-70%) translateX(-78%);
 }
 
-.nav-arrow.right {
-  right: 10px;
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px; /* You can adjust this padding to manage space inside the header */
+  width: 100%; /* This makes the header span the full width of the viewport */
+  position: fixed;
+  top: 0;
+  left: 0; /* Ensuring the header starts from the very left edge of the viewport */
+  height: 60px; /* Adjust height as necessary */
+  z-index: 1000; /* Keeps the header above other content */
 }
 
-.bg-peach {
-  background-color: rgba(255, 203, 164, 0.75);
-} /*# sourceMappingURL=style.css.map */
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Space between icons */
+}
+
+.icon-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  font-size: 24px; /* Adjust the size as necessary */
+  color: black; /* Or any color based on your design */
+}
+
+.icon-button:hover {
+  color: gray; /* Change on hover */
+}/*# sourceMappingURL=style.css.map */

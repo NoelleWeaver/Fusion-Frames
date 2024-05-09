@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fusion Frames</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@^2.0/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body class="bg-gray-50 flex">
 
-    <div class="fixed inset-0 left-0 flex flex-col justify-center py-10 w-40 bg-opacity-80 bg-peach">
+    <div class="fixed inset-0 left-0 flex flex-col justify-center py-10 w-40 bg-opacity-80 bg-black">
         <div class="mx-auto text-white">
             <ul class="space-y-6">
                 <li><a href="#" class="text-base hover:text-gray-300">Home</a></li>
@@ -21,86 +22,87 @@
     </div>
 
     <div class="pl-40 flex-1">
-        <header class="py-5 px-10 flex justify-between items-center w-full fixed bg-gray-50 shadow">
+        <header class="header">
             <h1 class="text-xl font-semibold">Fusion Frames</h1>
+            <div class="icons">
+                <button class="icon-button" aria-label="Search"><i class="fas fa-search"></i></button>
+                <button class="icon-button" aria-label="Cart"><i class="fas fa-shopping-bag"></i></button>
+            </div>
         </header>
 
         <div class="slider-container mt-20">
-            <button class="nav-arrow left" onclick="changeSlide(-1)">&lt;</button>
+            <button class="nav-arrow left" onclick="changeSlide(-1)"></button>
             <div class="slides">
                 <!-- Replicate this setup for each slide -->
-                <div class="slide" id="model1"><img src="./Images/Frames/glassesframes1.avif" alt="Slide 1">
+                <div class="slide" id="model1">
+                    <img src="./Images/Frames/glassesframes1.avif" alt="Slide 1">
                     <div class="frame-description">
-                        <h2 class="frame-name">Persol</h2>
-                        <span class="frame-price">$328</span>
-                        <ul class="color-options">
-                            <li><button style="background-color: #D9A483;"></button></li>
-                        </ul>
-                        <button class="details-dropdown">Product Details ▼</button>
-                        <button class="add-to-cart">Add to Cart</button>
+                        <p class="frame-name">Persol</p>
+                        <p class="frame-price">$328</p>
                     </div>
                 </div>
-                <div class="slide" id="model2"><img src="./Images/Frames/glassesframes2.avif" alt="Slide 2">
+                <div class="slide" id="model2">
+                    <img src="./Images/Frames/glassesframes2.avif" alt="Slide 2">
                     <div class="frame-description">
-                        <h2 class="frame-name">Ray-Ban</h2>
-                        <span class="frame-price">$250</span>
-                        <ul class="color-options">
-                            <li><button style="background-color: #000000;"></button></li>
-                        </ul>
-                        <button class="details-dropdown">Product Details ▼</button>
-                        <button class="add-to-cart">Add to Cart</button>
+                        <p class="frame-name">Arnette</p>
+                        <p class="frame-price">$93</p>
                     </div>
                 </div>
-                <div class="slide" id="model2"><img src="./Images/Frames/glassesframes2.avif" alt="Slide 2">
+                <div class="slide" id="model3">
+                    <img src="./Images/Frames/glassesframes3.avif" alt="Slide 3">
                     <div class="frame-description">
-                        <h2 class="frame-name">Ray-Ban</h2>
-                        <span class="frame-price">$250</span>
-                        <ul class="color-options">
-                            <li><button style="background-color: #000000;"></button></li>
-                        </ul>
-                        <button class="details-dropdown">Product Details ▼</button>
-                        <button class="add-to-cart">Add to Cart</button>
+                        <p class="frame-name">Armani Exchange</p>
+                        <p class="frame-price">$124</p>
                     </div>
                 </div>
-                <div class="slide" id="model2"><img src="./Images/Frames/glassesframes2.avif" alt="Slide 2">
+                <div class="slide" id="model4">
+                    <img src="./Images/Frames/glassesframes4.avif" alt="Slide 4">
                     <div class="frame-description">
-                        <h2 class="frame-name">Ray-Ban</h2>
-                        <span class="frame-price">$250</span>
-                        <ul class="color-options">
-                            <li><button style="background-color: #000000;"></button></li>
-                        </ul>
-                        <button class="details-dropdown">Product Details ▼</button>
-                        <button class="add-to-cart">Add to Cart</button>
+                        <p class="frame-name">Oakley</p>
+                        <p class="frame-price">$215</p>
                     </div>
                 </div>
-                <div class="slide" id="model2"><img src="./Images/Frames/glassesframes2.avif" alt="Slide 2">
+                <div class="slide" id="model5">
+                    <img src="./Images/Frames/glassesframes5.avif" alt="Slide 5">
                     <div class="frame-description">
-                        <h2 class="frame-name">Ray-Ban</h2>
-                        <span class="frame-price">$250</span>
-                        <ul class="color-options">
-                            <li><button style="background-color: #000000;"></button></li>
-                        </ul>
-                        <button class="details-dropdown">Product Details ▼</button>
-                        <button class="add-to-cart">Add to Cart</button>
+                        <p class="frame-name">Ray-Ban</p>
+                        <p class="frame-price">$198</p>
                     </div>
                 </div>
-                <div class="slide" id="model2"><img src="./Images/Frames/glassesframes2.avif" alt="Slide 2">
+                <div class="slide" id="model6">
+                    <img src="./Images/Frames/glassesframes6.avif" alt="Slide 6">
                     <div class="frame-description">
-                        <h2 class="frame-name">Ray-Ban</h2>
-                        <span class="frame-price">$250</span>
-                        <ul class="color-options">
-                            <li><button style="background-color: #000000;"></button></li>
-                        </ul>
-                        <button class="details-dropdown">Product Details ▼</button>
-                        <button class="add-to-cart">Add to Cart</button>
+                        <p class="frame-name">Ray-Ban</p>
+                        <p class="frame-price">$178</p>
+                    </div>
+                </div>
+                <div class="slide" id="model7">
+                    <img src="./Images/Frames/glassesframes7.avif" alt="Slide 7">
+                    <div class="frame-description">
+                        <p class="frame-name">Ray-Ban</p>
+                        <p class="frame-price">$210</p>
+                    </div>
+                </div>
+                <div class="slide" id="model8">
+                    <img src="./Images/Frames/glassesframes8.avif" alt="Slide 8">
+                    <div class="frame-description">
+                        <p class="frame-name">Coach</p>
+                        <p class="frame-price">$206</p>
+                    </div>
+                </div>
+                <div class="slide" id="model9">
+                    <img src="./Images/Frames/glassesframes9.avif" alt="Slide 9">
+                    <div class="frame-description">
+                        <p class="frame-name">Giorgio Armani</p>
+                        <p class="frame-price">$544</p>
                     </div>
                 </div>
             </div>
-            
-            <button class="nav-arrow right" onclick="changeSlide(1)">&gt;</button>
+        
+            <button class="nav-arrow right" onclick="changeSlide(1)"></button>
         </div>
 
-        <footer class="p-6 text-center fixed bottom-0 w-full bg-gray-50 shadow">
+        <footer class="p-6 text-center fixed bottom-0 w-full bg-gray-50">
             <p class="text-gray-600">&copy; 2024 Fusion Frames. All rights reserved.</p>
         </footer>
     </div>
