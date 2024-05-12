@@ -182,7 +182,7 @@ body {
 .textOne h1 {
   font-size: 55px;
   color: #FFD700;
-  text-shadow: 3px 3px 0px black;
+  text-shadow: 3px 3px 30px black;
   font-family: "DMSans";
   src: url("../Fonts/DMSans-VariableFont_opsz,wght.ttf") format("truetype");
 }
@@ -212,7 +212,7 @@ body {
 
 .textTwo h1 {
   color: #FFD700;
-  text-shadow: 3px 3px 0px black;
+  text-shadow: 3px 3px 30px black;
   font-size: 55px;
   font-family: "DMSans";
   src: url("../Fonts/DMSans-VariableFont_opsz,wght.ttf") format("truetype");
@@ -227,7 +227,7 @@ body {
   text-align: center;
   color: #FFD700;
   margin-top: 15rem;
-  text-shadow: 3px 3px 0px black;
+  text-shadow: 3px 3px 30px black;
 }
 
 .teamPics {
