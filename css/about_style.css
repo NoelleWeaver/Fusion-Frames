@@ -181,7 +181,7 @@ body {
 
 .textOne h1 {
   font-size: 55px;
-  color: #FFD700;
+  color: darkslategrey;
   font-family: "DMSans";
   src: url("../Fonts/DMSans-VariableFont_opsz,wght.ttf") format("truetype");
 }
