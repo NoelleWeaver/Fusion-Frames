@@ -1,6 +1,8 @@
 body {
   background-image: linear-gradient(white, black);
   flex-direction: column;
+  margin: 0;
+  padding: 0;
 }
 
 .icon {
