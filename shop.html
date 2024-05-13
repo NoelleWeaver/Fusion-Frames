@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - Fusion Frames</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@^2.0/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css"> <!-- Main CSS -->
+    <script src="./shop.js" defer></script> <!-- Shop JS -->
+</head>
+<body class="bg-gray-50 flex">
+    <!-- Sidebar and Toggle Button -->
+    <div class="sidebar-toggle" onclick="toggleSidebar()"></div>
+    <div class="sidebar fixed inset-0 left-0 flex flex-col justify-center py-10 bg-opacity-80 bg-black">
+        <div class="mx-auto text-white">
+            <ul class="sidebar-links">
+                <li><a href="./index.html" class="text-base hover:text-gray-300 font-side">Home</a></li>
+                <li><a href="#" class="text-base hover:text-gray-300 font-side">Shop</a></li>
+                <li><a href="./about.html" class="text-base hover:text-gray-300 font-side">About Us</a></li>
+                <li><a href="./cart.html" class="text-base hover:text-gray-300 font-side">Cart</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="pl-40 flex-1">
+        <header class="header">
+            <h1 class="logo">
+                <span class="logo-part1">Fusion</span>
+                <span class="logo-part2">Frames</span>
+            </h1>
+            <div class="icons">
+                <button class="icon-button" aria-label="Search"><i class="fas fa-search"></i></button>
+                <button class="icon-button" aria-label="Cart"><i class="fas fa-shopping-bag"></i></button>
+            </div>
+        </header>
+
+        <main class="shop-container">
+            <h1>Shop</h1>
+            <div class="products">
+                <!-- Example product -->
+                <div class="product">
+                    <img src="./Images/Frames/glassesframes1.avif" alt="Persol">
+                    <h2>Persol</h2>
+                    <p>$328</p>
+                    <button class="add-to-cart" data-id="1">Add to Cart</button>
+                </div>
+                <!-- Add more products as needed -->
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2024 Fusion Frames. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="./about.js"></script> <!-- Include the existing JavaScript file -->
+</body>
+</html>

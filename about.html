@@ -6,11 +6,24 @@
     <title>Fusion Frames</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@^2.0/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css"> 
     <link rel="stylesheet" href="./css/about_style.css">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body class="bg-gray-50 flex">
+    <div class="sidebar-toggle" onclick="toggleSidebar()"></div>
+    <div class="sidebar fixed inset-0 left-0 flex flex-col justify-center py-10 bg-opacity-80 bg-black">
+        <div class="mx-auto text-white">
+            <ul class="sidebar-links">
+                <li><a href="./index.html" class="text-base hover:text-gray-300 font-side">Home</a></li>
+                <li><a href="#" class="text-base hover:text-gray-300 font-side">Shop</a></li>
+                <li><a href="./about.html" class="text-base hover:text-gray-300 font-side">About Us</a></li>
+                <li><a href="#" class="text-base hover:text-gray-300 font-side">Cart</a></li>
+            </ul>
+        </div>
+    </div>
+    
     <header class="header">
         <h1 class="logo">
             <span class="logo-part1">Fusion</span>
@@ -59,6 +72,6 @@
     <script>
         AOS.init();
     </script>
-    <script src="./index.js"></script>
+    <script src="./about.js"></script> 
 </body>
 </html>

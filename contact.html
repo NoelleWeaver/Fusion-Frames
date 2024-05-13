@@ -3,33 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@^2.0/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/cont_style.css">
+    <link rel="stylesheet" href="./css/style.css"> 
     <title>Fusion</title>
 </head>
-<body>
-    <h1 class="logo">
-        <span class="logo-part1">Fusion</span>
-        <span class="logo-part2">Frames</span>
-    </h1>
-    <img class="people" src="./images/Warby Parker Eyewear Holiday 2022 Collection.jfif" alt="alan">
-    <h1>Contact Us</h1>
-    <p id="contact">Welcome to Fusion Frames! Whether you're a customer with inquiries or a business interested in collaboration, reaching us is easy. For general inquiries or product information, please fill out the form below, and we'll respond promptly. Business inquiries, including wholesale opportunities or collaborations, can be directed to our business development team at the provided contact details. Thank you for choosing Fusion Frames – we look forward to assisting you!</p>
-    <div class="box">
-        <p>Monday-Friday</p>
-        <p>10:00 am - 5:00 pm MST</p>
+<body class="bg-gray-50 flex">
+    <div class="sidebar-toggle" onclick="toggleSidebar()"></div>
+    <div class="sidebar fixed inset-0 left-0 flex flex-col justify-center py-10 bg-opacity-80 bg-black">
+        <div class="mx-auto text-white">
+            <ul class="sidebar-links">
+                <li><a href="./index.html" class="text-base hover:text-gray-300 font-side">Home</a></li>
+                <li><a href="#" class="text-base hover:text-gray-300 font-side">Shop</a></li>
+                <li><a href="./about.html" class="text-base hover:text-gray-300 font-side">About Us</a></li>
+                <li><a href="#" class="text-base hover:text-gray-300 font-side">Cart</a></li>
+            </ul>
+        </div>
     </div>
-    <div class="container">
-        <p>fakeEmail@gmail.com</p>
-        <p>602-123-4567</p>
-        <p>480-987-6543</p>
+    
+    <div class="pl-40 flex-1">
+        <h1 class="logo">
+            <span class="logo-part1">Fusion</span>
+            <span class="logo-part2">Frames</span>
+        </h1>
+        <img class="people" src="./images/Warby Parker Eyewear Holiday 2022 Collection.jfif" alt="alan">
+        <h1>Contact Us</h1>
+        <p id="contact">Welcome to Fusion Frames! Whether you're a customer with inquiries or a business interested in collaboration, reaching us is easy. For general inquiries or product information, please fill out the form below, and we'll respond promptly. Business inquiries, including wholesale opportunities or collaborations, can be directed to our business development team at the provided contact details. Thank you for choosing Fusion Frames – we look forward to assisting you!</p>
+        <div class="box">
+            <p>Monday-Friday</p>
+            <p>10:00 am - 5:00 pm MST</p>
+        </div>
+        <div class="container">
+            <p>fakeEmail@gmail.com</p>
+            <p>602-123-4567</p>
+            <p>480-987-6543</p>
+        </div>
+        <form>
+            <h2>Send a Message</h2>
+            <input type="text" id="name" placeholder="Fullname" name="name" autocomplete="additional-name" required><br>
+            <input type="text" id="email" placeholder="Email" name="email" autocomplete="email"><br>
+            <textarea type="text" id="message" placeholder="Message" name="message" rows="2" required></textarea>
+            <button type="submit" id="button" name="button">→</button>
+        </form>
     </div>
-    <form>
-        <h2>Send a Message</h2>
-        <input type="text" id="name" placeholder="Fullname" name="name" autocomplete="additional-name" required><br>
-        <input type="text" id="email" placeholder="Email" name="email" autocomplete="email"><br>
-        <textarea type="text" id="message" placeholder="Message" name="message" rows="2" required></textarea>
-        <button type="submit" id="button" name="button">→</button>
-      </form>
 
+    <script src="./about.js"></script> 
 </body>
 </html>
