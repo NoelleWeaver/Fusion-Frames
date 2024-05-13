@@ -1,0 +1,267 @@
+body {
+  background-image: linear-gradient(white, black);
+  flex-direction: column;
+}
+
+.icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  stroke-width: 1.5;
+  stroke: currentColor;
+  fill: none;
+  vertical-align: middle;
+}
+
+.hide-scroll-bar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.hide-scroll-bar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
+}
+
+.nav-arrow {
+  position: absolute;
+  top: 50%; /* Center vertically */
+  right: 10px; /* Place on the right side */
+  transform: translateY(-50%) translateX(-100%); /* Adjust horizontal position */
+  z-index: 10;
+  color: black;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  width: 40px; /* Fixed width for a circular shape */
+  height: 40px; /* Fixed height for a circular shape */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.nav-arrow::before {
+  content: ""; /* Use pseudo-element for custom icon */
+  display: block;
+  width: 15px; /* Width of the arrow */
+  height: 15px; /* Height of the arrow */
+  border-right: 2px solid black; /* Creates part of the arrow */
+  border-top: 2px solid black; /* Creates part of the arrow */
+  transform: rotate(45deg); /* Rotate to create an arrow shape */
+}
+
+.nav-arrow.left::before {
+  transform: rotate(-135deg); /* Rotate differently for the left arrow */
+}
+
+/* Adjust the positioning of the left arrow to stack it below the right arrow */
+.nav-arrow.left {
+  top: calc(50% + 60px); /* Move it down relative to the right arrow */
+  transform: translateY(-70%) translateX(-78%);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px; /* You can adjust this padding to manage space inside the header */
+  width: 100%; /* This makes the header span the full width of the viewport */
+  top: 0;
+  left: 0; /* Ensuring the header starts from the very left edge of the viewport */
+  height: 60px; /* Adjust height as necessary */
+  z-index: 1000; /* Keeps the header above other content */
+}
+
+.icons {
+  padding-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Space between icons */
+}
+
+.icon-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  font-size: 24px; /* Adjust the size as necessary */
+  color: black; /* Or any color based on your design */
+}
+
+.icon-button:hover {
+  color: gray; /* Change on hover */
+}
+
+.logo {
+  font-size: 48px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  color: black;
+  padding-left: 5px;
+  padding-top: 10px;
+}
+
+.logo-part1 {
+  color: white;
+  padding-right: 10px; /* Small padding for overlap effect */
+  background: url(https://coolbackgrounds.io/images/backgrounds/white/white-canyon-6c5d2a4c.jpg) 0 0/cover no-repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.logo-part2 {
+  padding-left: 11px;
+  color: black; /* Adjust as per design */
+  background: url(https://t3.ftcdn.net/jpg/01/36/78/52/360_F_136785269_05hcRhonbg4cyLZFApZWemV7oypynXqd.jpg) 0 0/cover no-repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@font-face {
+  font-family: "DMSans";
+  src: url("../Fonts/DMSans-VariableFont_opsz,wght.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+.body, h1, button {
+  font-family: "DMSans", sans-serif;
+}
+
+.sidebar-links li {
+  margin-bottom: 50px; /* Adds more space between each link */
+}
+
+.sidebar-links li:last-child {
+  margin-bottom: 0; /* Removes margin from the last item to maintain padding consistency at the bottom */
+}
+
+.font-side {
+  font-family: "DMSans", sans-serif;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+  display: block; /* Ensures the link takes full width for better hover area */
+}
+
+.font-side:hover {
+  color: #fff;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+}
+
+/* Additional styling to adjust vertical centering and padding of the sidebar */
+.mx-auto {
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centers the links vertically */
+  height: 100%; /* Takes full height to align items properly */
+}
+
+.rowOne {
+  display: flex;
+  justify-content: center;
+  margin-top: 15rem;
+}
+
+.rowOne img {
+  width: 500px;
+  height: auto;
+  margin-left: 8rem;
+  box-shadow: 40px 40px #FFD700;
+}
+
+.textOne {
+  text-align: center;
+  margin-right: 8rem;
+  margin-top: 3rem;
+}
+
+.textOne h1 {
+  font-size: 55px;
+  font-weight: bold;
+  color: black;
+  text-shadow: 3px 3px 20px #FFD700;
+  font-family: "DMSans";
+  src: url("../Fonts/DMSans-VariableFont_opsz,wght.ttf") format("truetype");
+}
+
+.textOne p {
+  font-size: 22px;
+}
+
+.rowTwo {
+  display: flex;
+  justify-content: center;
+  margin-top: 15rem;
+}
+
+.rowTwo img {
+  width: 500px;
+  height: auto;
+  margin-right: 8rem;
+  box-shadow: -40px 40px #FFD700;
+}
+
+.textTwo {
+  text-align: center;
+  margin-left: 8rem;
+  margin-top: 6rem;
+}
+
+.textTwo h1 {
+  font-size: 55px;
+  font-weight: bold;
+  color: black;
+  text-shadow: 3px 3px 20px #FFD700;
+  font-family: "DMSans";
+  src: url("../Fonts/DMSans-VariableFont_opsz,wght.ttf") format("truetype");
+}
+
+.textTwo p {
+  font-size: 22px;
+}
+
+.teamHeader {
+  font-size: 55px;
+  text-align: center;
+  color: black;
+  margin-top: 15rem;
+  text-shadow: 3px 3px 20px #FFD700;
+  font-weight: bold;
+}
+
+.teamPics {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+}
+
+.teamPics img {
+  height: 500px;
+  width: auto;
+  box-shadow: 10px 10px 5px;
+}
+
+.teamPics h1 {
+  font-size: 45px;
+  color: #FFD700;
+  text-align: center;
+  margin-top: 5rem;
+  text-shadow: 3px 3px 0px black;
+}
+
+.teamPics h2 {
+  font-size: 25px;
+  color: white;
+  text-align: center;
+  text-shadow: 3px 3px 0px black;
+}
+
+.footer {
+  text-align: center;
+  color: white;
+}/*# sourceMappingURL=about_style.css.map */
