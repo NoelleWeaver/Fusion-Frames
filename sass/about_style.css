@@ -1,3 +1,8 @@
+body {
+  background-image: linear-gradient(white, black);
+  flex-direction: column;
+}
+
 .icon {
   display: inline-block;
   width: 24px;
@@ -15,57 +20,6 @@
 
 .hide-scroll-bar::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Opera*/
-}
-
-.slider-container {
-  position: relative;
-  height: 80vh;
-  width: calc(100% - 160px); /* Adjust width to account for sidebar */
-  transition: width 0.3s ease, padding-left 0.3s ease; /* Smooth transition for resizing and repositioning */
-  overflow: hidden;
-  padding-left: 160px; /* Initial padding to offset the width of the sidebar */
-}
-
-/* Adjustments when the sidebar is closed */
-.sidebar.closed ~ .slider-container {
-  width: 100%; /* Use full width of the viewport */
-  padding-left: 0; /* Remove padding */
-}
-
-.slides {
-  display: flex;
-  transition: transform 0.5s ease;
-  width: 900%; /* As there are 6 slides, each slide should be 100% of the view width */
-}
-
-.slide {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column; /* Stack image and description vertically */
-  justify-content: center; /* Center everything vertically */
-  align-items: center; /* Center everything horizontally */
-}
-
-.slide img {
-  max-width: 75%; /* Adjust based on desired size */
-  max-height: 70%; /* Adjust to leave space for the description */
-  -o-object-fit: contain;
-  object-fit: contain; /* Ensures the image is fully visible without cropping */
-}
-
-.frame-description {
-  text-align: center; /* Center the text */
-  margin-top: 20px; /* Space between image and text */
-}
-
-.frame-name {
-  font-size: 1.2rem; /* Large enough to be readable */
-  font-weight: bold;
-}
-
-.frame-price {
-  font-size: 1rem;
 }
 
 .nav-arrow {
@@ -112,7 +66,6 @@
   align-items: center;
   padding: 0 10px; /* You can adjust this padding to manage space inside the header */
   width: 100%; /* This makes the header span the full width of the viewport */
-  position: fixed;
   top: 0;
   left: 0; /* Ensuring the header starts from the very left edge of the viewport */
   height: 60px; /* Adjust height as necessary */
@@ -194,8 +147,8 @@
 }
 
 .font-side:hover {
-  color: #008080;
-  text-shadow: 0 0 8px rgba(28, 117, 250, 0.8);
+  color: #fff;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
 }
 
 /* Additional styling to adjust vertical centering and padding of the sidebar */
@@ -206,95 +159,109 @@
   justify-content: center; /* Centers the links vertically */
   height: 100%; /* Takes full height to align items properly */
 }
-.footer {
-  position: fixed;
-  bottom: 0;
-  left: 40px; /* Same as the width of your left navigation bar */
-  right: 0;
-  padding: 6px 10px;
-  background-color: transparent; /* Keeps the background consistent with the page */
-  text-align: center;
-  color: #666; /* A slightly lighter grey for the text */
-  z-index: 10; /* Ensures it stays on top of other content */
-  box-sizing: border-box; /* Ensures padding is included in width calculation */
-}
 
-.footer p {
-  margin: 0; /* Removes default margin from the paragraph for precise control */
-  font-size: 14px; /* Adjust font size as necessary */
-}
-
-.slide-dots {
-  position: absolute;
-  bottom: 2px;
-  left: 50%;
-  transform: translateX(-50%); /* Center dots */
-  text-align: center;
-}
-
-.dot {
-  height: 10px;
-  width: 10px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  margin: 0 5px;
-}
-
-.dot.active {
-  background-color: #717171;
-}
-
-.sidebar {
-  width: 160px; /* Adjusted to the original width */
-  transition: width 0.3s ease, padding 0.3s ease;
-  overflow-x: hidden;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  background-color: #333;
-  color: white;
-  z-index: 1000;
-}
-
-.sidebar.closed {
-  width: 0;
-  padding: 0;
-}
-
-.sidebar-toggle {
-  position: fixed;
-  top: 50%;
-  left: 160px; /* Should match the width of the sidebar */
-  transform: translateY(-50%);
-  z-index: 1001; /* Above the sidebar */
-  cursor: pointer;
-  background-color: #666;
-  color: white;
-  border: none;
-  outline: none;
-  width: 20px;
-  height: 60px;
-  border-radius: 15px;
+.rowOne {
   display: flex;
-  align-items: center;
   justify-content: center;
-  margin-left: 20px;
+  margin-top: 15rem;
 }
 
-/* Ensure the toggle button does not disappear when sidebar is closed */
-.sidebar.closed + .sidebar-toggle {
-  left: 0; /* Adjust this to keep the button visible */
+.rowOne img {
+  width: 500px;
+  height: auto;
+  margin-left: 8rem;
+  box-shadow: 40px 40px #FFD700;
 }
 
-.sidebar-toggle::before {
-  font-size: 16px;
+.textOne {
+  text-align: center;
+  margin-right: 8rem;
+  margin-top: 3rem;
+}
+
+.textOne h1 {
+  font-size: 55px;
+  font-weight: bold;
+  color: black;
+  text-shadow: 3px 3px 20px #FFD700;
+  font-family: "DMSans";
+  src: url("../Fonts/DMSans-VariableFont_opsz,wght.ttf") format("truetype");
+}
+
+.textOne p {
+  font-size: 22px;
+}
+
+.rowTwo {
+  display: flex;
+  justify-content: center;
+  margin-top: 15rem;
+}
+
+.rowTwo img {
+  width: 500px;
+  height: auto;
+  margin-right: 8rem;
+  box-shadow: -40px 40px #FFD700;
+}
+
+.textTwo {
+  text-align: center;
+  margin-left: 8rem;
+  margin-top: 6rem;
+}
+
+.textTwo h1 {
+  font-size: 55px;
+  font-weight: bold;
+  color: black;
+  text-shadow: 3px 3px 20px #FFD700;
+  font-family: "DMSans";
+  src: url("../Fonts/DMSans-VariableFont_opsz,wght.ttf") format("truetype");
+}
+
+.textTwo p {
+  font-size: 22px;
+}
+
+.teamHeader {
+  font-size: 55px;
+  text-align: center;
+  color: black;
+  margin-top: 15rem;
+  text-shadow: 3px 3px 20px #FFD700;
+  font-weight: bold;
+}
+
+.teamPics {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+}
+
+.teamPics img {
+  height: 500px;
+  width: auto;
+  box-shadow: 10px 10px 5px;
+}
+
+.teamPics h1 {
+  font-size: 45px;
+  color: #FFD700;
+  text-align: center;
+  margin-top: 5rem;
+  text-shadow: 3px 3px 0px black;
+}
+
+.teamPics h2 {
+  font-size: 25px;
   color: white;
+  text-align: center;
+  text-shadow: 3px 3px 0px black;
 }
 
-/* Hover effect for sidebar toggle */
-.sidebar-toggle:hover {
-  background-color: #555;
-}
-/*# sourceMappingURL=style.css.map */
+.footer {
+  text-align: center;
+  color: white;
+}/*# sourceMappingURL=about_style.css.map */
