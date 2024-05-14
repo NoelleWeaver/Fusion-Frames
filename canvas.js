@@ -57,7 +57,8 @@ function animate() {
     // c.clearRect(0,0,innerWidth,innerHeight);
     c.beginPath();
     c.arc(x,y,50,0, Math.PI * 2, false);
-    c.strokeStyle = "blue";
+    var randomColor = Math.floor(Math.random()*16777215).toString(16);
+    c.strokeStyle = "#" + randomColor;
     c.stroke();
     if(x + radius > innerWidth || x - radius < 0){
         dx = -dx;
