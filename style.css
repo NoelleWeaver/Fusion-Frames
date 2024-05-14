@@ -17,6 +17,12 @@
         width:200px;
         height:200px;
     }
+    33% {
+        transform:translateX(0px);
+    }
+    66% {
+        transform:translateX(400px);
+    }
     100% {
         transform: translateY(400px)rotate(10600deg);
         color:red;
