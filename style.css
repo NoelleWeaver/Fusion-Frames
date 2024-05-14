@@ -9,7 +9,7 @@
 
 @keyframes bouncing{
     0% {
-        transform:rotate(0deg);
+        transform: translateY(0px), rotate(0deg);
         color:green;
         border-radius:0px;
         background-color: blue;
@@ -18,12 +18,12 @@
         height:200px;
     }
     100% {
-        transform:rotate(360deg);
+        transform: translateY(400px)rotate(10600deg);
         color:red;
         border-radius:50%;
         background-color: pink;
         font-size:100px;
-        width:1000px;
-        height:1000px;
+        width:500px;
+        height:500px;
     }
 }
