@@ -1,0 +1,26 @@
+.bounce{
+    position:absolute;
+    text-align: center;
+    left:50%;
+    transform: translate(-50%, -50%);
+    font-size:50px;
+    font-family:fantasy;
+    width:200px;
+    height:200px;
+    animation:bouncing 0.6s ease infinite alternate;
+}
+
+@keyframes bouncing{
+    0% {
+        transform: translateY(0px), rotate(0deg);
+        color:green;
+        border-radius:0px;
+        background-color: blue;
+    }
+    100% {
+        transform: translateY(800px)rotate(360deg);
+        color:red;
+        border-radius:50%;
+        background-color: pink;
+    }
+}
