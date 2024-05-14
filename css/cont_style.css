@@ -8,11 +8,12 @@
   src: url(../Fonts/DMSans-VariableFont_opsz\,wght.ttf);
 }
 img {
-  height: 829px;
+  height: 833px;
   width: 699px;
   position: relative;
   top: 0%;
   left: -12%;
+  overflow-y: none;
 }
 
 h1 {
