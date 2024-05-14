@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded', function () {
         
         toggleButton.style.left = sidebar.classList.contains('closed') ? '0px' : originalSidebarWidth;
         
-        sliderContainer.style.paddingLeft = sidebar.classList.contains('closed') ? '0px' : originalSidebarWidth;
         
         logoPart1.style.backgroundImage = sidebar.classList.contains('closed') ? alternateBackground : originalBackground;
     }
