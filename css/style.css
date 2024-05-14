@@ -205,7 +205,8 @@
   flex-direction: column;
   justify-content: center; /* Centers the links vertically */
   height: 100%; /* Takes full height to align items properly */
-} 
+}
+
 .footer {
   position: fixed;
   bottom: 0;
@@ -298,7 +299,4 @@
   background-color: #555;
 }
 
-.product h2 {
-  font-family: monospace;
-  font-size: 30px;
-}/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.css.map */
