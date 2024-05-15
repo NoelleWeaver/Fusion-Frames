@@ -16,21 +16,21 @@ canvas.height = window.innerHeight;
 
 var c = canvas.getContext('2d');
 
-// // c.fillStyle = "red";
-// // c.fillRect(100,100,100,100);
-// // c.fillStyle = "blue"
-// // c.fillRect(400,100,100,100);
-// // c.fillStyle = "green";
-// // c.fillRect(300,300,100,100);
-// // console.log(canvas);
+c.fillStyle = "red";
+c.fillRect(100,100,100,100);
+c.fillStyle = "blue"
+c.fillRect(400,100,100,100);
+c.fillStyle = "green";
+c.fillRect(300,300,100,100);
+console.log(canvas);
 
-// //Line
-// // c.beginPath();
-// // c.moveTo(50,300);
-// // c.lineTo(300, 100);
-// // c.lineTo(400, 300);
-// // c.strokeStyle = "hotpink";
-// // c.stroke();
+// Line
+c.beginPath();
+c.moveTo(50,300);
+c.lineTo(300, 100);
+c.lineTo(400, 300);
+c.strokeStyle = "hotpink";
+c.stroke();
 
 // //Arc/Circle
 // // c.beginPath();
@@ -54,7 +54,7 @@ var dy = (Math.random() - 0.5) * 100;
 var radius = 30;
 function animate() {
     requestAnimationFrame(animate);
-    // c.clearRect(0,0,innerWidth,innerHeight);
+    c.clearRect(0,0,innerWidth,innerHeight);
     c.beginPath();
     c.arc(x,y,50,0, Math.PI * 2, false);
     var randomColor = Math.floor(Math.random()*16777215).toString(16);
