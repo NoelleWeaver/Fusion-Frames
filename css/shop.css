@@ -62,7 +62,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #FFD700;
+  background: rgba(255, 255, 255, 0.09);
   -webkit-clip-path: circle(150px at 80% 20%);
           clip-path: circle(150px at 80% 20%);
   transition: 0.5s ease-in-out;
