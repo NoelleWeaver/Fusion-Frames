@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function getProductById(id) {
         const products = [
-            { id: '1', name: 'Persol', price: 328, image: './Images/Frames/glassesframes1.avif' },
+            { id: '1', name: 'Persol', price: 179.99, image: './Images/Frames/glassesframes1.avif' },
             // Add more products here
         ];
         return products.find(product => product.id === id);
@@ -42,7 +42,6 @@ document.addEventListener('DOMContentLoaded', function () {
         
         toggleButton.style.left = sidebar.classList.contains('closed') ? '0px' : originalSidebarWidth;
         
-        sliderContainer.style.paddingLeft = sidebar.classList.contains('closed') ? '0px' : originalSidebarWidth;
         
         logoPart1.style.backgroundImage = sidebar.classList.contains('closed') ? alternateBackground : originalBackground;
     }
