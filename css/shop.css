@@ -34,6 +34,7 @@ body {
   width: 300px;
   height: 350px;
   border-radius: 15px;
+  border: 2px solid black;
 }
 
 .product img {
@@ -53,16 +54,28 @@ body {
   font-weight: bold;
 }
 
-.infoBox {
+.infoLeft {
   position: relative;
+  left: 10px;
   top: 35%;
   left: 55%;
   transform: translate(-50%, -50%);
 }
 
-.add-to-cart {
+.infoRight {
   position: relative;
-  top: 20%;
-  left: 75%;
+  right: 10px;
+  transform: translate(-50%, -50%);
+}
+
+.add-to-cart {
+  background-color: rgba(19, 16, 16, 0.8);
+  width: 100.5%;
+  height: 50px;
+  border-radius: 10px;
+  color: white;
+  position: relative;
+  top: 16.5%;
+  left: 50%;
   transform: translate(-50%, -50%);
 }/*# sourceMappingURL=shop.css.map */
