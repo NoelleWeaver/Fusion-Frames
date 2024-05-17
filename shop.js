@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     console.log('DOM fully loaded and parsed');
     
-    // To prevent duplicate event listeners, use a flag
     if (!window.addToCartInitialized) {
         const addToCartButtons = document.querySelectorAll('.add-to-cart');
 
@@ -19,7 +18,15 @@ document.addEventListener('DOMContentLoaded', () => {
             const product = getProductById(productId);
 
             if (product) {
-                cart.push(product);
+                const existingProductIndex = cart.findIndex(item => item.id === product.id);
+
+                if (existingProductIndex !== -1) {
+                    cart[existingProductIndex].quantity += 1;
+                } else {
+                    product.quantity = 1;
+                    cart.push(product);
+                }
+
                 localStorage.setItem('cart', JSON.stringify(cart));
                 alert('Product added to cart');
             }
@@ -91,7 +98,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         updateToggleButton();
 
-        // Set the flag to indicate that event listeners are initialized
         window.addToCartInitialized = true;
     } else {
         console.log('Add to Cart listeners already initialized');
