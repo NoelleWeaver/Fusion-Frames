@@ -203,7 +203,29 @@ body {
 }
 .summer{
     position:relative;
-    top:-210px;
-    left:30px;
-    width:
+    top:-250px;
+    left:-30px;
+    width: 450px;
+}
+.palm{
+    position:relative;
+    top:-445px;
+    left:400px;
+    z-index: 5;
+    height: 200px;
+}
+.textHeader{
+    color:white;
+    font-size:30px;
+    position: relative;
+    top:-600px;
+    left:500px;
+    z-index: 3;
+    text-align: center;
+    width:350px;
+    background: linear-gradient(90deg, #ff0000, #f48637);
+}
+.surf{
+    top:650px;
+    
 }
