@@ -19,7 +19,7 @@ body {
 }
 
 .container {
-  margin-left: 1rem;
+  margin-right: auto;
   display: flex;
   flex-wrap: wrap;
   gap: 25px;
@@ -98,7 +98,7 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) rotate(5deg) rotateY(0deg);
+  transform: translate(-50%, -50%) rotate(0deg) rotateY(0deg);
   width: 270px;
 }
 
@@ -235,4 +235,11 @@ body {
   left: 600px;
   transform: rotateY(180deg);
   height: 100px;
+}
+
+.girl {
+  position: relative;
+  top: -880px;
+  left: 850px;
+  width: 350px;
 }/*# sourceMappingURL=shop.css.map */

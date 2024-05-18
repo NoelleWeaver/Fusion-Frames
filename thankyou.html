@@ -6,9 +6,58 @@
     <title>Thank You - Fusion Frames</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@^2.0/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.css" rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css"> <!-- Main CSS -->
+    <link rel="stylesheet" href="./css/style.css"> 
+    <style>
+        .thank-you-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+            text-align: center;
+        }
+        .thank-you-container h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        .thank-you-container p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .thank-you-container img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 2rem;
+        }
+        .thank-you-container a {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background-color: #3490dc;
+            color: white;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .thank-you-container a:hover {
+            background-color: #2779bd;
+        }
+    </style>
+    <script src="./thankyou.js" defer></script>
 </head>
 <body class="bg-gray-50 flex">
+    <div class="sidebar-toggle" onclick="toggleSidebar()"></div>
+    <div class="sidebar fixed inset-0 left-0 flex flex-col justify-center py-10 bg-opacity-80 bg-black">
+        <div class="mx-auto text-white">
+            <ul class="sidebar-links">
+                <li><a href="./index.html" class="text-base hover:text-gray-300 font-side">Home</a></li>
+                <li><a href="./shop.html" class="text-base hover:text-gray-300 font-side">Shop</a></li>
+                <li><a href="./about.html" class="text-base hover:text-gray-300 font-side">About Us</a></li>
+                <li><a href="./cart.html" class="text-base hover:text-gray-300 font-side">Cart</a></li>
+            </ul>            
+        </div>
+    </div>
+    
     <div class="pl-40 flex-1">
         <header class="header">
             <h1 class="logo">
@@ -18,8 +67,10 @@
         </header>
 
         <main class="thank-you-container">
+            <img src="./Images/thankyoulogo.png" alt="Thank You">
             <h1>Thank You for Your Purchase!</h1>
             <p>Your order has been successfully processed.</p>
+            <a href="./index.html">Continue Shopping</a>
         </main>
 
         <footer class="footer">
