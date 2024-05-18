@@ -10,7 +10,7 @@
     <title>Fusion</title>
 </head>
 <body class="bg-gray-50 flex">
-    <div class="sidebar-toggle" onclick="toggleSidebar()"></div>
+    <div id="sidebar-toggle" class="sidebar-toggle" onclick="toggleSidebar()"></div>
     <div class="sidebar fixed inset-0 left-0 flex flex-col justify-center py-10 bg-opacity-80 bg-black">
         <div class="mx-auto text-white">
             <ul class="sidebar-links">
@@ -21,14 +21,20 @@
             </ul>            
         </div>
     </div> 
-   
     <div class="pl-40 flex-1">
-        <h1 class="logo">
-            <span class="logo-part1">Fusion</span>
-            <span class="logo-part2">Frames</span>
-        </h1>
+        <header class="header">
+            <h1 class="logo">
+                <span class="logo-part1">Fusion</span>
+                <span class="logo-part2">Frames</span>
+            </h1>
+            <div class="icons">
+                <button class="icon-button" aria-label="Search"><i class="fas fa-search"></i></button>
+                <button class="icon-button" aria-label="Cart"><i class="fas fa-shopping-bag"></i></button>
+            </div>
+        </header>
+    </div>
         <div class="content">
-        <img class="people" src="./images/Warby Parker Eyewear Holiday 2022 Collection.jfif" alt="alan">
+        <img id="people" class="people" src="./images/Warby Parker Eyewear Holiday 2022 Collection.jfif" alt="alan">
         <h1>Contact Us</h1>
         <p id="contact">For general inquiries or product information, please fill out the form below, and we'll respond promptly. For business inquiries, including wholesale opportunities or collaborations, contact our business development team.
 

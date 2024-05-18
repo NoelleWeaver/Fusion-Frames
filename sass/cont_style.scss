@@ -2,21 +2,23 @@
     margin: 0;
     padding: 0;
 }
-
 @font-face {
     font-family: Testing;
     src: url(../Fonts/DMSans-VariableFont_opsz\,wght.ttf);
 }
-
-img {
-    height: 833px;
-    width: 699px;
-    position: relative;
-    top: 0%;
-    left: -12%;
-    overflow-y: none;
+#sidebar-toggle.disabled {
+    pointer-events: none;
+    opacity: 0;
 }
-
+img {
+    height: 100vh; /* This sets the height of the image to 100% of the viewport height */
+    width: auto; /* This ensures the aspect ratio of the image is maintained */
+    position: fixed; /* This keeps the image fixed in position as you scroll */
+    top: 0%;
+    left: 18%;
+    transform: translateX(-50%); /* Moves the image back to the center */
+    overflow-y: hidden; /* This property isn't necessary on the img element */
+}
 h1 {
     position: absolute;
     font-size: 5vw;
@@ -26,27 +28,23 @@ h1 {
     top: 16%;
     font-family: Testing;
 }
-
 #contact {
     width: 350px;
     position: absolute;
     top: 18%;
     left: 75%;
 }
-
 .box{
     position: absolute;
     top: 55%;
     left: 53%;
 }
-
 .container{
     position: absolute;
     top: 65%;
     left: 53%;
     width: 300px;
 }
-
 form{
     position: absolute;
     top: 45%;
@@ -104,140 +102,118 @@ form{
     position: absolute;
     left: 1%;
     top: 0%;
-    z-index: 100;
-  }
-  
-  .logo-part1 {
-    z-index: 1000;
+    z-index: 1500;
+}
+.logo-part1 {
     color: white;
     padding-right: 10px; /* Small padding for overlap effect */
     background: url(https://coolbackgrounds.io/images/backgrounds/white/white-canyon-6c5d2a4c.jpg)0 0 / cover no-repeat;
     -webkit-background-clip: text;
     position: relative;
     -webkit-text-fill-color: transparent;
-  }
-  
-  .logo-part2 {
-    z-index: 100;
+}
+.logo-part2 {
     padding-left: 11px;
     color: black; /* Adjust as per design */
     background: url(https://t3.ftcdn.net/jpg/01/36/78/52/360_F_136785269_05hcRhonbg4cyLZFApZWemV7oypynXqd.jpg)0 0 / cover no-repeat;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-  }
-  @media only screen and (max-width: 600px) {
+}
+@media only screen and (max-width: 600px) {
     img {
-        height: auto;
-        width: 100%;
-        left: 0;
-        top: 160%;
+        opacity: 0;
     }
-
+    .sidebar-toggle {
+        // opacity: 0;
+    }
     h1 {
         font-size: 8vw;
         left: 40%;
         top: 15%;
     }
-
     #contact {
         width: 60%;
         top: 27%;
         left: 35%;
     }
-
     .box {
         top: 104%;
         left: 33%;
+        margin-top:12rem;
     }
-
     .container {
         top: 102%;
         left: 70%;
         width: 100px;
+        margin-top:12rem;
     }
-
     form {
         top: 55%;
         left: 40%;
+        margin-top:8rem;
     }
-
     form h2 {
         font-size: 6vw;
     }
-
     form #name,
     form #email,
     form #message {
         font-size: 4vw;
         margin-bottom: 10px;
     }
-
     form #button {
         width: 10vw;
         height: 10vw;
         font-size: 4vw;
     }
-
     .logo {
         font-size: 8vw;
         left: 2%;
         top: 2%;
     }
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
     img {
-        height: auto;
-        width: 100%;
-        left: 0;
-        top: 310%;
+        opacity: 0;
     }
-
     h1 {
         font-size: 8vw;
         left: 47%;
         top: 13%;
     }
-
     #contact {
         width: 50%;
         top: 23%;
         left: 45%;
     }
-
     .box {
         top: 88%;
         left: 47%;
         font-size: 100;
     }
-
     .container {
         top: 97%;
         left: 47%;
         width: 100px;
     }
-
     form {
         top: 57%;
         left: 47%;
     }
-
     form h2 {
         font-size: 6vw;
     }
-
     form #name,
     form #email,
     form #message {
         font-size: 4vw;
         margin-bottom: 10px;
     }
-
     form #button {
         width: 10vw;
         height: 10vw;
         font-size: 4vw;
     }
-
     .logo {
         font-size: 8vw;
         left: 2%;

@@ -7,13 +7,19 @@
   font-family: Testing;
   src: url(../Fonts/DMSans-VariableFont_opsz\,wght.ttf);
 }
+#sidebar-toggle.disabled {
+  pointer-events: none;
+  opacity: 0;
+}
+
 img {
-  height: 833px;
-  width: 699px;
-  position: relative;
+  height: 100vh; /* This sets the height of the image to 100% of the viewport height */
+  width: auto; /* This ensures the aspect ratio of the image is maintained */
+  position: fixed; /* This keeps the image fixed in position as you scroll */
   top: 0%;
-  left: -12%;
-  overflow-y: none;
+  left: 18%;
+  transform: translateX(-50%); /* Moves the image back to the center */
+  overflow-y: hidden; /* This property isn't necessary on the img element */
 }
 
 h1 {
@@ -103,11 +109,10 @@ form #button {
   position: absolute;
   left: 1%;
   top: 0%;
-  z-index: 100;
+  z-index: 1500;
 }
 
 .logo-part1 {
-  z-index: 1000;
   color: white;
   padding-right: 10px; /* Small padding for overlap effect */
   background: url(https://coolbackgrounds.io/images/backgrounds/white/white-canyon-6c5d2a4c.jpg) 0 0/cover no-repeat;
@@ -117,7 +122,6 @@ form #button {
 }
 
 .logo-part2 {
-  z-index: 100;
   padding-left: 11px;
   color: black; /* Adjust as per design */
   background: url(https://t3.ftcdn.net/jpg/01/36/78/52/360_F_136785269_05hcRhonbg4cyLZFApZWemV7oypynXqd.jpg) 0 0/cover no-repeat;
@@ -127,10 +131,7 @@ form #button {
 
 @media only screen and (max-width: 600px) {
   img {
-    height: auto;
-    width: 100%;
-    left: 0;
-    top: 160%;
+    opacity: 0;
   }
   h1 {
     font-size: 8vw;
@@ -145,15 +146,18 @@ form #button {
   .box {
     top: 104%;
     left: 33%;
+    margin-top: 12rem;
   }
   .container {
     top: 102%;
     left: 70%;
     width: 100px;
+    margin-top: 12rem;
   }
   form {
     top: 55%;
     left: 40%;
+    margin-top: 8rem;
   }
   form h2 {
     font-size: 6vw;
@@ -175,12 +179,9 @@ form #button {
     top: 2%;
   }
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   img {
-    height: auto;
-    width: 100%;
-    left: 0;
-    top: 310%;
+    opacity: 0;
   }
   h1 {
     font-size: 8vw;

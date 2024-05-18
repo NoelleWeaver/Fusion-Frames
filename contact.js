@@ -1,4 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
+
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        document.getElementById('sidebar-toggle').classList.add('disabled');
+    }
     const sidebar = document.querySelector('.sidebar');
     const toggleButton = document.querySelector('.sidebar-toggle');
     const sliderContainer = document.querySelector('.content');
