@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const cartItemsContainer = document.querySelector('.cart-items');
     const orderSummaryContainer = document.querySelector('.order-summary');
-    
+
     function loadCart() {
         let cart = JSON.parse(localStorage.getItem('cart')) || [];
         cartItemsContainer.innerHTML = '';
@@ -40,6 +40,11 @@ document.addEventListener('DOMContentLoaded', function() {
     function updateOrderSummary() {
         let cart = JSON.parse(localStorage.getItem('cart')) || [];
         let subtotal = cart.reduce((total, item) => total + item.price * item.quantity, 0);
+        let shipping = 10.00;
+        let taxRate = 0.056; // Arizona tax rate
+        let tax = subtotal * taxRate;
+        let total = subtotal + shipping + tax;
+
         orderSummaryContainer.innerHTML = `
             <div class="flex justify-between mb-2">
                 <p>Subtotal</p>
@@ -47,15 +52,15 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
             <div class="flex justify-between mb-2">
                 <p>Shipping</p>
-                <p>$0.00</p>
+                <p>$${shipping.toFixed(2)}</p>
             </div>
             <div class="flex justify-between mb-2">
                 <p>Taxes</p>
-                <p>$0.00</p>
+                <p>$${tax.toFixed(2)}</p>
             </div>
             <div class="flex justify-between font-bold mb-2">
                 <p>Order Total</p>
-                <p>$${subtotal.toFixed(2)}</p>
+                <p>$${total.toFixed(2)}</p>
             </div>
             <button class="checkout-button">Checkout</button>
         `;
