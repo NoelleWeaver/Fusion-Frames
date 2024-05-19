@@ -1,0 +1,43 @@
+@media (max-width: 768px) {
+    .slide img {
+        width: 100%;
+        height: auto;
+    }
+
+    .slide {
+        padding: 0 20px;
+    }
+
+    .nav-arrow {
+        font-size: 1.5rem;
+    }
+
+    .sidebar-toggle {
+        left: 80px; 
+    }
+
+    .pl-40 {
+        padding-left: 80px; 
+    }
+
+}
+
+@media (max-width: 480px) {
+    .slide img {
+        width: 100%;
+        height: auto;
+    }
+
+    .slide {
+        padding: 0 10px;
+    }
+
+    .nav-arrow {
+        font-size: 1.2rem;
+    }
+
+    .pl-40 {
+        padding-left: 60px; 
+    }
+
+}

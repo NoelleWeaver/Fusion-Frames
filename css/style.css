@@ -9,58 +9,57 @@
 }
 
 .hide-scroll-bar {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; 
+  scrollbar-width: none; 
 }
 
 .hide-scroll-bar::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera*/
+  display: none; 
 }
 
 .slider-container {
   position: relative;
   height: 80vh;
-  width: calc(100% - 160px); /* Adjust width to account for sidebar */
-  transition: width 0.3s ease, padding-left 0.3s ease; /* Smooth transition for resizing and repositioning */
+  width: calc(100% - 160px); 
+  transition: width 0.3s ease, padding-left 0.3s ease; 
   overflow: hidden;
-  padding-left: 160px; /* Initial padding to offset the width of the sidebar */
+  padding-left: 160px; 
 }
 
-/* Adjustments when the sidebar is closed */
 .sidebar.closed ~ .slider-container {
-  width: 100%; /* Use full width of the viewport */
-  padding-left: 0; /* Remove padding */
+  width: 100%; 
+  padding-left: 0; 
 }
 
 .slides {
   display: flex;
   transition: transform 0.5s ease;
-  width: 900%; /* As there are 6 slides, each slide should be 100% of the view width */
+  width: 900%; 
 }
 
 .slide {
   width: 100%;
   height: 100%;
   display: flex;
-  flex-direction: column; /* Stack image and description vertically */
-  justify-content: center; /* Center everything vertically */
-  align-items: center; /* Center everything horizontally */
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
 }
 
 .slide img {
-  max-width: 75%; /* Adjust based on desired size */
-  max-height: 70%; /* Adjust to leave space for the description */
+  max-width: 75%;
+  max-height: 70%; 
   -o-object-fit: contain;
-  object-fit: contain; /* Ensures the image is fully visible without cropping */
+  object-fit: contain; 
 }
 
 .frame-description {
-  text-align: center; /* Center the text */
-  margin-top: 20px; /* Space between image and text */
+  text-align: center; 
+  margin-top: 20px; 
 }
 
 .frame-name {
-  font-size: 1.2rem; /* Large enough to be readable */
+  font-size: 1.2rem; 
   font-weight: bold;
 }
 
@@ -70,16 +69,16 @@
 
 .nav-arrow {
   position: absolute;
-  top: 50%; /* Center vertically */
-  right: 10px; /* Place on the right side */
-  transform: translateY(-50%) translateX(-100%); /* Adjust horizontal position */
+  top: 50%; 
+  right: 10px;
+  transform: translateY(-50%) translateX(-100%); 
   z-index: 10;
   color: black;
   border: none;
   padding: 10px;
   cursor: pointer;
-  width: 40px; /* Fixed width for a circular shape */
-  height: 40px; /* Fixed height for a circular shape */
+  width: 40px; 
+  height: 40px; 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -87,22 +86,21 @@
 }
 
 .nav-arrow::before {
-  content: ""; /* Use pseudo-element for custom icon */
+  content: ""; 
   display: block;
-  width: 15px; /* Width of the arrow */
-  height: 15px; /* Height of the arrow */
-  border-right: 2px solid black; /* Creates part of the arrow */
-  border-top: 2px solid black; /* Creates part of the arrow */
-  transform: rotate(45deg); /* Rotate to create an arrow shape */
+  width: 15px;
+  height: 15px; 
+  border-right: 2px solid black; 
+  border-top: 2px solid black; 
+  transform: rotate(45deg); 
 }
 
 .nav-arrow.left::before {
-  transform: rotate(-135deg); /* Rotate differently for the left arrow */
+  transform: rotate(-135deg); 
 }
 
-/* Adjust the positioning of the left arrow to stack it below the right arrow */
 .nav-arrow.left {
-  top: calc(50% + 60px); /* Move it down relative to the right arrow */
+  top: calc(50% + 60px);
   transform: translateY(-70%) translateX(-78%);
 }
 
@@ -110,18 +108,18 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 10px; /* You can adjust this padding to manage space inside the header */
-  width: 100%; /* This makes the header span the full width of the viewport */
+  padding: 0 10px;
+  width: 100%;
   position: fixed;
   top: 0;
-  left: 0; /* Ensuring the header starts from the very left edge of the viewport */
-  height: 60px; /* Adjust height as necessary */
-  z-index: 1000; /* Keeps the header above other content */
+  left: 0; 
+  height: 60px; 
+  z-index: 1000; 
 }
 
 .icons {
   padding-top: 10px;
-  gap: 20px; /* Space between icons */
+  gap: 20px; 
 }
 
 .icon-button {
@@ -129,12 +127,12 @@
   border: none;
   cursor: pointer;
   padding: 8px;
-  font-size: 24px; /* Adjust the size as necessary */
-  color: black; /* Or any color based on your design */
+  font-size: 24px; 
+  color: black; 
 }
 
 .icon-button:hover {
-  color: gray; /* Change on hover */
+  color: gray; 
 }
 
 .logo {
@@ -149,7 +147,7 @@
 
 .logo-part1 {
   color: white;
-  padding-right: 10px; /* Small padding for overlap effect */
+  padding-right: 10px; 
   background: url(https://coolbackgrounds.io/images/backgrounds/white/white-canyon-6c5d2a4c.jpg) 0 0/cover no-repeat;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -157,7 +155,7 @@
 
 .logo-part2 {
   padding-left: 11px;
-  color: black; /* Adjust as per design */
+  color: black; 
   background: url(https://t3.ftcdn.net/jpg/01/36/78/52/360_F_136785269_05hcRhonbg4cyLZFApZWemV7oypynXqd.jpg) 0 0/cover no-repeat;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -174,11 +172,11 @@
 }
 
 .sidebar-links li {
-  margin-bottom: 50px; /* Adds more space between each link */
+  margin-bottom: 50px; 
 }
 
 .sidebar-links li:last-child {
-  margin-bottom: 0; /* Removes margin from the last item to maintain padding consistency at the bottom */
+  margin-bottom: 0; 
 }
 
 .font-side {
@@ -188,7 +186,7 @@
   font-weight: 500;
   letter-spacing: 0.5px;
   transition: color 0.3s ease;
-  display: block; /* Ensures the link takes full width for better hover area */
+  display: block;
 }
 
 .font-side:hover {
@@ -196,38 +194,37 @@
   text-shadow: 0 0 8px rgba(28, 117, 250, 0.8);
 }
 
-/* Additional styling to adjust vertical centering and padding of the sidebar */
 .mx-auto {
   padding: 0 20px;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Centers the links vertically */
-  height: 100%; /* Takes full height to align items properly */
+  justify-content: center; 
+  height: 100%; 
 }
 
 .footer {
   position: fixed;
   bottom: 0;
-  left: 40px; /* Same as the width of your left navigation bar */
+  left: 40px; 
   right: 0;
   padding: 6px 10px;
-  background-color: transparent; /* Keeps the background consistent with the page */
+  background-color: transparent; 
   text-align: center;
-  color: #666; /* A slightly lighter grey for the text */
-  z-index: 10; /* Ensures it stays on top of other content */
-  box-sizing: border-box; /* Ensures padding is included in width calculation */
+  color: #666; 
+  z-index: 10; 
+  box-sizing: border-box;
 }
 
 .footer p {
-  margin: 0; /* Removes default margin from the paragraph for precise control */
-  font-size: 14px; /* Adjust font size as necessary */
+  margin: 0; 
+  font-size: 14px; 
 }
 
 .slide-dots {
   position: absolute;
   bottom: 2px;
   left: 50%;
-  transform: translateX(-50%); /* Center dots */
+  transform: translateX(-50%); 
   text-align: center;
 }
 
@@ -245,7 +242,7 @@
 }
 
 .sidebar {
-  width: 160px; /* Adjusted to the original width */
+  width: 160px; 
   transition: width 0.3s ease, padding 0.3s ease;
   overflow-x: hidden;
   position: fixed;
@@ -265,9 +262,9 @@
 .sidebar-toggle {
   position: fixed;
   top: 50%;
-  left: 160px; /* Should match the width of the sidebar */
+  left: 160px; 
   transform: translateY(-50%);
-  z-index: 1001; /* Above the sidebar */
+  z-index: 1001; 
   cursor: pointer;
   background-color: #666;
   color: white;
@@ -282,9 +279,8 @@
   margin-left: 20px;
 }
 
-/* Ensure the toggle button does not disappear when sidebar is closed */
 .sidebar.closed + .sidebar-toggle {
-  left: 0; /* Adjust this to keep the button visible */
+  left: 0; 
 }
 
 .sidebar-toggle::before {
@@ -292,9 +288,11 @@
   color: white;
 }
 
-/* Hover effect for sidebar toggle */
+
 .sidebar-toggle:hover {
   background-color: #555;
 }
+
+
 
 /*# sourceMappingURL=style.css.map */
