@@ -30,7 +30,16 @@ function updateActiveDot() {
 function changeSlideTo(slideIndex) {
     const slides = document.querySelector('.slides');
     const slideCount = slides.children.length;
-    currentSlide = slideIndex % slideCount; 
+    
+    // Handle looping behavior
+    if (slideIndex < 0) {
+        currentSlide = slideCount - 1;  // Loop to the last slide
+    } else if (slideIndex >= slideCount) {
+        currentSlide = 0;  // Loop to the first slide
+    } else {
+        currentSlide = slideIndex;
+    }
+
     slides.style.transform = `translateX(-${currentSlide * (100 / slideCount)}%)`;
     updateActiveDot();
 }
