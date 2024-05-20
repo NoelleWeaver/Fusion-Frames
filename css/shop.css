@@ -4,9 +4,13 @@ body {
   display: flex;
   justify-content: center;
   overflow-x: hidden;
+  align-items: center;
+  min-height: 100vh;
+  background: #131313;
 }
 
 .headerBox {
+  flex-basis: 200;
   height: 200px;
   width: 1200px;
   background-color: #FFD700;
@@ -23,7 +27,6 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 25px;
-  margin-top: 23rem;
 }
 
 * {
@@ -31,16 +34,9 @@ body {
   margin: 0;
 }
 
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background: #131313;
-}
-
 .container .card {
   position: relative;
+  top: -750px;
   width: 320px;
   height: 450px;
   background: #323232;
@@ -215,10 +211,10 @@ body {
   font-size: 30px;
   position: relative;
   top: -600px;
-  left: 500px;
+  left: 510px;
   z-index: 3;
   text-align: center;
-  width: 350px;
+  width: 400px;
   background: linear-gradient(90deg, #ff0000, #f48637);
 }
 
@@ -242,41 +238,16 @@ body {
   top: -880px;
   left: 850px;
   width: 350px;
+}
+
+.priceCut {
+  text-decoration: line-through;
+}
+
+h4 {
+  color: white;
+  font-weight: 300;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }/*# sourceMappingURL=shop.css.map */
-
-@media (max-width: 1200px) {
-  .card {
-      width: calc(33.333% - 40px);
-  }
-}
-
-@media (max-width: 992px) {
-  .card {
-      width: calc(50% - 40px);
-  }
-}
-
-@media (max-width: 768px) {
-  .card {
-      width: calc(50% - 20px);
-  }
-}
-
-@media (max-width: 576px) {
-  .card {
-      width: calc(100% - 20px);
-  }
-
-  .contentBox h2 {
-      font-size: 1.25rem;
-  }
-
-  .contentBox .price {
-      font-size: 1rem;
-  }
-
-  .add-to-cart {
-      padding: 8px 16px;
-      font-size: 0.875rem;
-  }
-}

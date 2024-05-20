@@ -4,9 +4,13 @@ body{
     display: flex;
     justify-content: center;
     overflow-x: hidden;
+    align-items: center;
+    min-height: 100vh;
+    background: #131313;
 }
 
 .headerBox{
+    flex-basis:200;
     height:200px;
     width:1200px;
     background-color: #FFD700;
@@ -22,14 +26,6 @@ body{
     display:flex;
     flex-wrap:wrap;
     gap:25px;
-    margin-top:23rem;
-    // margin-left:50px;
-    // display: grid;
-    // grid-auto-columns: max-content; //added
-    // grid-auto-flow: dense; // added
-    // grid-auto-rows: minmax(100px, auto);
-    // grid-gap: 25px;
-    // grid-template-columns: repeat(4, 1fr);
 }
 
 * {
@@ -37,16 +33,9 @@ body{
     margin: 0;
 }
 
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: #131313;
-}
-
 .container .card {
     position: relative;
+    top:-750px;
     width: 320px;
     height: 450px;
     background: #323232;
@@ -218,10 +207,10 @@ body {
     font-size:30px;
     position: relative;
     top:-600px;
-    left:500px;
+    left:510px;
     z-index: 3;
     text-align: center;
-    width:350px;
+    width:400px;
     background: linear-gradient(90deg, #ff0000, #f48637);
 }
 .tube{
@@ -242,4 +231,14 @@ body {
     top:-880px;
     left:850px;
     width:350px;
+}
+.priceCut{
+    text-decoration: line-through;
+}
+h4{
+    color: white;
+    font-weight: 300;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
