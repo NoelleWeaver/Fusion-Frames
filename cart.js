@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 cartItem.classList.add('cart-item', 'flex', 'justify-between', 'items-center', 'p-4', 'border-b', 'border-gray-200');
                 cartItem.innerHTML = `
                     <div class="flex items-center">
-                        <img src="${item.image}" alt="${item.name}" class="w-16 h-16 mr-4">
+                        <img src="${item.image}" alt="${item.name}" class="w-16 h-8 mr-2">
                         <div>
                             <h2 class="font-bold">${item.name}</h2>
                             <div class="flex items-center">

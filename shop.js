@@ -34,14 +34,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
         function getProductById(id) {
             const products = [
-                { id: '1', name: 'Scuderia Ferrari', price: 105.99, image: './Images/Frames/ShopFrames/special1.avif' },
-                { id: '2', name: 'Persol', price: 430.99, image: './Images/Frames/ShopFrames/special2.avif' },
-                { id: '3', name: 'Armani Exchange', price: 86.99, image: './Images/Frames/ShopFrames/special3.avif' },
-                { id: '4', name: 'Jimmy Choo', price: 295.99, image: './Images/Frames/ShopFrames/special4.avif' },
-                { id: '5', name: 'Arnette', price: 93.99, image: './Images/Frames/ShopFrames/special5.avif' },
-                { id: '6', name: 'Ray-Ban', price: 180.99, image: './Images/Frames/ShopFrames/special6.avif' },
-                { id: '7', name: 'Tory Burch', price: 192.99, image: './Images/Frames/ShopFrames/special7.avif' },
-                { id: '8', name: 'Ralph', price: 86.99, image: './Images/Frames/ShopFrames/special8.avif' },
+                { id: '1', name: 'Scuderia Ferrari', price: 74.99, image: './Images/Frames/ShopFrames/special1.avif' },
+                { id: '2', name: 'Persol', price: 301.99, image: './Images/Frames/ShopFrames/special2.avif' },
+                { id: '3', name: 'Armani Exchange', price: 60.99, image: './Images/Frames/ShopFrames/special3.avif' },
+                { id: '4', name: 'Jimmy Choo', price: 207.99, image: './Images/Frames/ShopFrames/special4.avif' },
+                { id: '5', name: 'Arnette', price: 65.99, image: './Images/Frames/ShopFrames/special5.avif' },
+                { id: '6', name: 'Ray-Ban', price: 126.99, image: './Images/Frames/ShopFrames/special6.avif' },
+                { id: '7', name: 'Tory Burch', price: 135.09, image: './Images/Frames/ShopFrames/special7.avif' },
+                { id: '8', name: 'Ralph', price: 60.89, image: './Images/Frames/ShopFrames/special8.avif' },
                 { id: '9', name: 'Persol', price: 249.99, image: './Images/Frames/ShopFrames/product1.avif' },
                 { id: '10', name: 'Scuderia Ferrari', price: 145.99, image: './Images/Frames/ShopFrames/product2.avif' },
                 { id: '11', name: 'Armani Exchange', price: 124.99, image: './Images/Frames/ShopFrames/product3.avif' },

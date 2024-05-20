@@ -10,7 +10,6 @@ body{
 }
 
 .headerBox{
-    flex-basis:200;
     height:200px;
     width:1200px;
     background-color: #FFD700;
@@ -140,8 +139,8 @@ body{
     transition-delay: .6s;
 }
 
-.container .card .contentBox .itemID h3,
-.container .card .contentBox .price h3 {
+.container .card .contentBox .itemID h4,
+.container .card .contentBox .price h4 {
     color: white;
     font-weight: 300;
     font-size: 14px;
@@ -235,7 +234,7 @@ body{
 .priceCut{
     text-decoration: line-through;
 }
-h4{
+h3{
     color: white;
     font-weight: 300;
     font-size: 20px;
