@@ -250,4 +250,35 @@ h4 {
   font-size: 20px;
   text-transform: uppercase;
   letter-spacing: 2px;
+}
+
+@media (max-width: 1200px) {
+  .card {
+    width: calc(33.333% - 40px);
+  }
+}
+@media (max-width: 992px) {
+  .card {
+    width: calc(50% - 40px);
+  }
+}
+@media (max-width: 768px) {
+  .card {
+    width: calc(50% - 20px);
+  }
+}
+@media (max-width: 576px) {
+  .card {
+    width: calc(100% - 20px);
+  }
+  .contentBox h2 {
+    font-size: 1.25rem;
+  }
+  .contentBox .price {
+    font-size: 1rem;
+  }
+  .add-to-cart {
+    padding: 8px 16px;
+    font-size: 0.875rem;
+  }
 }/*# sourceMappingURL=shop.css.map */

@@ -143,6 +143,7 @@
     height:500px;
     width:auto;
     box-shadow: 10px 10px 5px;
+    width:350px;
 }
 .teamPics h1{
     font-size:45px;
@@ -307,5 +308,87 @@ body {
 
     .font-side {
         font-size: 14px;
+    }
+}
+@media (max-width: 1200px) {
+    .rowOne, .rowTwo {
+        flex-direction: column;
+    }
+
+    .rowOne img, .rowTwo img {
+        max-width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .rowOne .textOne, .rowTwo .textTwo {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .teamPics {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .teamPics div {
+        max-width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .teamPics img {
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 992px) {
+    .rowOne img, .rowTwo img {
+        max-width: 100%;
+    }
+
+    .teamPics div {
+        max-width: 100%;
+    }
+
+    .teamPics img {
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    .teamPics img {
+        max-width: 70%;
+    }
+
+    .rowOne img, .rowTwo img {
+        max-width: 100%;
+    }
+
+    .rowOne .textOne, .rowTwo .textTwo {
+        padding: 5px;
+    }
+
+    .contactLink {
+        padding: 8px 16px;
+        font-size: 0.875rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .teamPics img {
+        max-width: 60%;
+    }
+
+    .rowOne img, .rowTwo img {
+        max-width: 100%;
+    }
+
+    .rowOne .textOne, .rowTwo .textTwo {
+        padding: 5px;
+        font-size: 0.875rem;
+    }
+
+    .contactLink {
+        padding: 6px 12px;
+        font-size: 0.75rem;
     }
 }
